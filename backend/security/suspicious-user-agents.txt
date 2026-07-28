@@ -1,0 +1,8 @@
+# Suspicious User-Agent Blacklist
+# Block bots and scrapers
+python-requests
+curl
+PostmanRuntime
+BadBot
+Scraper
+# Add suspicious User-Agents below

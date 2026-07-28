@@ -1,0 +1,6 @@
+# Malicious IP Blacklist
+# Block known bad actors
+192.168.1.100
+10.0.0.5
+172.16.0.25
+# Add production malicious IPs below
