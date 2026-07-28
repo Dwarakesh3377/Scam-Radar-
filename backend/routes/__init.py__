@@ -1,0 +1,19 @@
+"""
+Routes Package
+==============
+API route blueprints.
+"""
+
+from .auth import auth_bp
+from .analyze import analyze_bp
+from .feedback import feedback_bp
+from .settings import settings_bp
+from .reviews import reviews_bp
+
+__all__ = [
+    'auth_bp',
+    'analyze_bp',
+    'feedback_bp',
+    'settings_bp',
+    'reviews_bp'
+]
