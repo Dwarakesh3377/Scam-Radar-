@@ -1,0 +1,333 @@
+.review-card {
+    background: var(--card-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.review-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.2);
+    border-color: rgba(255, 0, 0, 0.3);
+}
+
+.review-card.verified {
+    border-left: 4px solid #00ff00;
+    background: linear-gradient(90deg, rgba(0, 255, 0, 0.05) 0%, transparent 100%);
+}
+
+/* Header Styles */
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.1);
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.reviewer-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff3366, #ff6666);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+}
+
+.reviewer-details {
+    flex: 1;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.verified-badge {
+    background: rgba(0, 255, 0, 0.2);
+    color: #00ff00;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.review-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.meta-item.source {
+    background: rgba(255, 165, 0, 0.2);
+    color: #ffa500;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+.scam-type-tag {
+    padding: 4px 12px;
+    border-radius: 20px;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+/* Company Info */
+.company-info {
+    margin-bottom: 15px;
+    padding: 12px;
+    background: rgba(255, 0, 0, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid #ff0000;
+}
+
+.company-name {
+    color: #ff0000;
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.loss-amount {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffcc00;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Review Text */
+.review-text {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.review-text p {
+    margin: 0;
+    white-space: pre-line;
+}
+
+/* Proof Section */
+.proof-section {
+    margin-bottom: 15px;
+    padding: 12px;
+    background: var(--primary-transparent);
+    border-radius: 8px;
+    border: 1px solid var(--primary-glow);
+}
+
+.proof-section h5 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.proof-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.proof-link {
+    padding: 6px 12px;
+    background: var(--primary-transparent);
+    border: 1px solid var(--primary-glow);
+    border-radius: 6px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.proof-link:hover {
+    background: var(--primary-glow);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.review-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 0, 0, 0.1);
+}
+
+.vote-section {
+    display: flex;
+    gap: 10px;
+}
+
+.vote-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.vote-btn:hover {
+    transform: translateY(-2px);
+}
+
+.vote-btn.upvote:hover {
+    background: rgba(0, 255, 0, 0.1);
+    border-color: rgba(0, 255, 0, 0.5);
+    color: #00ff00;
+}
+
+.vote-btn.downvote:hover {
+    background: rgba(255, 0, 0, 0.1);
+    border-color: rgba(255, 0, 0, 0.5);
+    color: #ff0000;
+}
+
+.vote-btn.active {
+    background: rgba(0, 255, 0, 0.2);
+    border-color: #00ff00;
+    color: #00ff00;
+}
+
+.vote-btn.downvote.active {
+    background: rgba(255, 0, 0, 0.2);
+    border-color: #ff0000;
+    color: #ff0000;
+}
+
+.action-section .report-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 15px;
+    border: 2px solid rgba(255, 0, 0, 0.3);
+    border-radius: 20px;
+    background: transparent;
+    color: rgba(255, 0, 0, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.action-section .report-btn:hover:not(:disabled) {
+    background: rgba(255, 0, 0, 0.1);
+    border-color: #ff0000;
+    color: #ff0000;
+}
+
+.action-section .report-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.action-section .report-btn.reported {
+    background: rgba(255, 0, 0, 0.2);
+    border-color: #ff0000;
+    color: #ff0000;
+}
+
+/* Verification Status */
+.verification-status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.verification-status.confirmed {
+    background: rgba(0, 255, 0, 0.2);
+    color: #00ff00;
+    border: 1px solid rgba(0, 255, 0, 0.5);
+}
+
+.verification-status.pending {
+    background: rgba(255, 165, 0, 0.2);
+    color: #ffa500;
+    border: 1px solid rgba(255, 165, 0, 0.5);
+}
+
+.verification-status.unverified {
+    background: rgba(128, 128, 128, 0.2);
+    color: #808080;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .review-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .review-meta {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    .review-footer {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .vote-section {
+        justify-content: center;
+    }
+    
+    .action-section .report-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

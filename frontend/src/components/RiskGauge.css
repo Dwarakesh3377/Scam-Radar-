@@ -1,0 +1,122 @@
+.risk-gauge-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.gauge-wrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.gauge-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.gauge-center {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.percentage-value {
+  font-size: 42px;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -2px;
+  transition: all 0.5s ease;
+}
+
+/* Risk Label */
+.risk-label {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border: 2px solid;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.risk-label.legitimate {
+  animation: pulse-green 2s infinite;
+}
+
+.risk-label.suspicious {
+  animation: pulse-orange 2s infinite;
+}
+
+.risk-label.scam {
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 255, 0, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(0, 255, 0, 0.6); }
+}
+
+@keyframes pulse-orange {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 165, 0, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(255, 165, 0, 0.6); }
+}
+
+@keyframes pulse-red {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(255, 0, 0, 0.6); }
+}
+
+/* Legend */
+.gauge-legend {
+  display: flex;
+  gap: 25px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px currentColor;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .risk-gauge-container {
+    padding: 15px;
+  }
+
+  .percentage-value {
+    font-size: 32px !important;
+  }
+
+  .risk-label {
+    padding: 10px 25px;
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+
+  .gauge-legend {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

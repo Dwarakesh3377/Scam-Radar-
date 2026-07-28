@@ -1,0 +1,131 @@
+.toast-container {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  width: calc(100% - 40px);
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  background: var(--card-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--box-shadow);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.toast-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.toast-message {
+  flex: 1;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.toast-close {
+  background: transparent;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.toast-close:hover {
+  color: #fff;
+}
+
+.toast-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  transform-origin: left;
+}
+
+/* Toast Types */
+.toast-success {
+  border-color: rgba(0, 255, 0, 0.3);
+}
+
+.toast-success .toast-icon {
+  color: #00ff00;
+  filter: drop-shadow(0 0 5px rgba(0, 255, 0, 0.5));
+}
+
+.toast-success .toast-progress {
+  background: linear-gradient(90deg, #00ff00, transparent);
+}
+
+.toast-error {
+  border-color: rgba(255, 0, 0, 0.3);
+}
+
+.toast-error .toast-icon {
+  color: #ff4444;
+  filter: drop-shadow(0 0 5px rgba(255, 68, 68, 0.5));
+}
+
+.toast-error .toast-progress {
+  background: linear-gradient(90deg, #ff4444, transparent);
+}
+
+.toast-warning {
+  border-color: rgba(255, 165, 0, 0.3);
+}
+
+.toast-warning .toast-icon {
+  color: #ffa500;
+  filter: drop-shadow(0 0 5px rgba(255, 165, 0, 0.5));
+}
+
+.toast-warning .toast-progress {
+  background: linear-gradient(90deg, #ffa500, transparent);
+}
+
+.toast-info {
+  border-color: var(--primary-color);
+}
+
+.toast-info .toast-icon {
+  color: var(--primary-color);
+  filter: drop-shadow(0 0 5px var(--primary-glow));
+}
+
+.toast-info .toast-progress {
+  background: linear-gradient(90deg, var(--primary-color), transparent);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .toast-container {
+    top: 70px;
+    right: 10px;
+    left: 10px;
+    width: auto;
+  }
+
+  .toast {
+    padding: 12px 15px;
+  }
+
+  .toast-message {
+    font-size: 13px;
+  }
+}
