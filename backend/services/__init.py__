@@ -1,0 +1,29 @@
+"""
+Services Package
+================
+AI/ML services for scam detection.
+"""
+
+from .language import detect_language, get_language_name
+from .preprocess import preprocess_text, clean_text, extract_entities
+from .anonymize import anonymize_text, mask_email, mask_phone
+from .features import extract_features, extract_text_features
+from .predict import predict_risk, load_models
+from .explain import generate_shap_explanations, get_general_explanations
+
+__all__ = [
+    'detect_language',
+    'get_language_name',
+    'preprocess_text',
+    'clean_text',
+    'extract_entities',
+    'anonymize_text',
+    'mask_email',
+    'mask_phone',
+    'extract_features',
+    'extract_text_features',
+    'predict_risk',
+    'load_models',
+    'generate_shap_explanations',
+    'get_general_explanations'
+]
